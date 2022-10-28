@@ -1,0 +1,36 @@
+.App {
+  background-color: #367585;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.introInfo {
+  height: 100vh;
+}
+
+form {
+  background-color: #CDE2EC;
+  width: 40%;
+}
+
+.formItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  color: white;
+  background-color: #FD9F60;
+  border: none;
+  min-width: 150px;
+}
+
+footer {
+  height: 20vh;
+}/*# sourceMappingURL=styles.css.map */
