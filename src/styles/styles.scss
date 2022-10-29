@@ -1,8 +1,6 @@
 @use "./sass/partials/variables" as *;
 
-.App {
-  background-color: #367585;
-}
+
 
 .wrapper {
   max-width: 1400px;
@@ -16,6 +14,7 @@
 
 form {
     background-color: #CDE2EC;
+    height: 50vh;
     width: 40%;
     //border-radius: 25%;
 }
@@ -36,4 +35,16 @@ button {
 footer {
     height: 20vh;
     
+}
+
+.newEntryButton {
+  width: 400px;
+  margin-left: 75px;
+}
+
+.beginnerSection {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

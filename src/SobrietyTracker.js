@@ -12,7 +12,7 @@ const SobrietyTracker = () => {
     }
 
     return (
-        <section>
+        <section className="wrapper">
             <div>
                 <h2>Sober Streak</h2>
                 <p>Click the button below to track your number of days substance free</p>
