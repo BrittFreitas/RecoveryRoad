@@ -1,0 +1,99 @@
+@use "./variables" as *;
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ .introInfo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+
+.headerContent {
+    background-color: $lightGrey;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    h1 {
+        font-size: 3rem;
+        max-width: 400px;
+        padding-left: 60px;
+    }
+}
+.headerPhoto {
+    width: 57%; 
+}
+    
+
+
+header {
+    width: 100%;
+    background-color: $lightGrey;
+    
+     h2 {
+        padding: 20px;
+        font-size: 1rem;
+     } 
+}
+
+.howTo {
+    display: flex;
+    align-items: center;
+    
+    height: 40vh;
+    
+    div {
+        width: calc(100% / 3 );
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+       
+      
+         h3 {
+            font-size: 1.2rem;
+         }
+    }
+}
+
+.enterApp {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-evenly;
+
+
+    p {
+        font-size: 1rem;
+    }
+    .options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button {
+        width: 268px;
+    }
+}
+}
+
+
+.newEntryButton {
+    width: 150px;
+    background-color: $orange;
+   
+  }
+  
+ 

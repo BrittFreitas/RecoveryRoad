@@ -1,0 +1,47 @@
+@use './variables' as *;
+
+.reflectionForm {
+    margin: 50px 0;
+     form {
+        border: 2px solid $babyBlue;
+        height: 50vh;
+        width: 60%; 
+        h3 {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+        label {
+            text-align: left;
+            width: 86%;
+            margin-top: 10px;
+        }
+
+        input:focus {
+            border: none;
+            outline: none;
+           }
+
+        textarea {
+       border: 1px solid $bloodOrange;
+       width: 85%;
+        
+        }
+
+        button {
+            margin: 20px;
+        }
+    }
+
+   
+    .formItems {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 90%;
+     
+    }
+
+}
+   

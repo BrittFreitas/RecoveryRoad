@@ -1,0 +1,33 @@
+@use "./variables" as *;
+body {
+    font-size: 62.5%;
+    color: $royalBlue;
+}
+
+button {
+    color: white;
+    background-color: $bloodOrange;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    width: 150px;
+    min-width: 100px;
+    font-size: clamp( 0.5rem, 3vw, 0.75rem);
+}
+
+i {
+    color: $orange;
+    font-size: 2.5rem;;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    height: 15vh;
+    background-color: $backgroundColor;
+    display: flex;
+    align-items: center;
+}

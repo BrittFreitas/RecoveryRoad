@@ -1,5 +1,8 @@
 @use "./sass/partials/variables" as *;
-
+@use "./sass/partials/landingPage";
+@use "./sass/partials/globalStyles";
+@use "./sass/partials/mainPage";
+@use "./sass/partials/form";
 
 
 .wrapper {
@@ -8,43 +11,5 @@
   margin: 0 auto;
 }
 
-.introInfo {
-    height: 100vh;
-}
 
-form {
-    background-color: #CDE2EC;
-    height: 50vh;
-    width: 40%;
-    //border-radius: 25%;
-}
-.formItems {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-button {
-    color: white;
-    background-color: #FD9F60;
-    border: none;
-    min-width: 150px;
-}
-
-footer {
-    height: 20vh;
-    
-}
-
-.newEntryButton {
-  width: 400px;
-  margin-left: 75px;
-}
-
-.beginnerSection {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

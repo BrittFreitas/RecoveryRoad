@@ -2,7 +2,6 @@ import { useState, useEffect} from "react"
 import Entries from "./Entries";
 
 
-
 const Form = (props) => {
   const [date, setDate] = useState("");
   const [urgeIntensity, setUrgeIntensity] = useState(0);
@@ -10,12 +9,7 @@ const Form = (props) => {
   const [quantity, setQuantity] = useState("");
   const [feelsAfter, setFeelsAfter] = useState("");
   const [strategiesUsed, setStrategiesUsed] = useState("");
-  const [displayNewEntry, setDisplayNewEntry] = useState(false);
-
-    
-  const handleEntryDisplay = () => {
-    setDisplayNewEntry(!displayNewEntry);
-  }
+  
  
 
   //creating functions for each state that set the state to the users input, each of these functions will be called on
@@ -29,51 +23,44 @@ const Form = (props) => {
 
   return (
     <section className="wrapper">
-      <div>
-        <form className="formItems" action="" onSubmit={(e) => props.handleFormSubmit(e, date, urgeIntensity, triggers, quantity, feelsAfter, strategiesUsed )}>
-          <label htmlFor="">Enter today's date.</label>
-          <input type="text" onChange={(e) => handleDateChange(e)}/>
-
-          <label htmlFor="">Rate the intensity of your urge from 1-10.</label>
-          <input type="text" onChange={(e) => handleUrgeChange(e)}/>
+      <div className="reflectionForm">
+        <form className="formItems wrapper" action="" onSubmit={(e) => props.handleFormSubmit(e, date, urgeIntensity, triggers, quantity, feelsAfter, strategiesUsed )}>
+        <h3>Reflection Form</h3>
+        <p>Complete the form below to log details of your urge.</p>
+          <label htmlFor="">Date:</label>
+          <textarea cols="50" type="text" onChange={(e) => handleDateChange(e)}/>
+ 
+          <label htmlFor="">Rate the intensity of your urge from 1-10:</label>
+          <textarea cols="50" rows="2" type="text" onChange={(e) => handleUrgeChange(e)}/>
 
           <label htmlFor="">
             What internal or external triggers may have prompted the urge?
           </label>
-          <input
+          <textarea cols="50"
           onChange={(e) => handleTriggerChange(e)}
             type="text"
-            placeholder="describe any thoughts, feelings, situations, or sensations that happended before the urge"
           />
 
-          <label htmlFor="">Describe the quantity of your use?</label>
-          <input
+          <label htmlFor="">Describe the quantity of your use:</label>
+          <textarea cols="50"
           onChange={(e) => handleQuantityChange(e)}
             type="text"
-            placeholder="If you refrained from using, please type none"
           />
 
           <label htmlFor="">
             What thoughts and feelings did you have after the urge?
           </label>
-          <input type="text" onChange={(e) => handleFeelsChange(e)} />
+          <textarea cols="50" type="text" onChange={(e) => handleFeelsChange(e)} />
 
           <label htmlFor="">
             What, if any strategies did you find helpful in supporting yourself
             through this urge?
           </label>
-          <input type="text" onChange={(e) => handleCopingChange(e)} />
+          <textarea cols="50" type="text" onChange={(e) => handleCopingChange(e)} />
 
-          <button type="submit" onClick={handleEntryDisplay} >Save</button>
+          <button type="submit">Save</button>
 
         </form>
-
-        {
-          displayNewEntry
-          ? <Entries formData={props.formData}/>
-          : null
-        }
-
       
       </div>
     </section>

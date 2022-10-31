@@ -1,40 +1,41 @@
 const Entries = (props) => {
 
-  console.log(props.data)
+ 
+  // triggers: triggers,
+  // quantity: quantity,
+  // reflections: feelsAfter,
+  // strategiesUsed: strategiesUsed,
+  
+  //not working
+ // console.log(props.newState)
+  
   return (
-    <section>
+    <div className="entry"> 
+    <h3>{props.data.date}</h3>
       <ul>
-        <div>
-          <h3>Date of urge</h3>
-          <p>{props.data.date}</p>
-        </div>
+        <li>
+          <p>Urge Intensity: {props.data.urgeIntensity}</p>
+        </li>
 
-        <div>
-          <h3>Urge Intensity</h3>
-          <p>{props.data.urgeIntensity}</p>
-        </div>
+        <li>
+            <p>Triggers: {props.data.triggers}</p> 
+        </li>
 
-        <div>
-            <h3>Triggers</h3>
-            <p>{props.data.triggers}</p> 
-        </div>
-
-        <div>
-            <h3>Use</h3>
-            <p>{props.data.quantity}</p> 
-        </div>
+        <li>
+            <p>Use: {props.data.quantity}</p>
+        </li>
          
-        <div>
-            <h3>Thoughts and Feelings Post Urge</h3>
-            <p>{props.data.reflections}</p>  
-        </div>
+        <li>
+            <p>Thoughts and Feelings Post Urge: {props.data.reflections}</p>
+     
+        </li>
         
-        <div>
-            <h3>Strategy and it's impact</h3>
-            <p>{props.data.strategiesUsed}</p>
-        </div> 
+        <li>
+            <p>Strategy and it's impact: {props.data.strategiesUsed}</p>
+          
+        </li> 
       </ul>
-    </section>
+    </div>
   );
 };
 
