@@ -23,6 +23,15 @@ i {
 h3 {
     text-align: center;
     margin: 0;
+   
+}
+
+h2 {
+     font-size: 1.5rem;
+}
+
+p {
+    font-size: 0.75rem;
 }
 
 footer {
@@ -31,3 +40,10 @@ footer {
     display: flex;
     align-items: center;
 }
+
+.wrapper {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  

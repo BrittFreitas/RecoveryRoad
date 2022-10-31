@@ -13,11 +13,7 @@ function App() {
   const [showIntro, setShowIntro] = useState(true);
   const [showSobrietyTracker, setShowSobrietyTracker] = useState(false);
   const [entry, setEntry] = useState([]);
-  const [displayNewEntry, setDisplayNewEntry] = useState(false);
-
-  const handleEntryDisplay = () => {
-    setDisplayNewEntry(!displayNewEntry);
-  };
+ 
 
   const handleSobrietyTracker = () => {
     setShowSobrietyTracker(!showSobrietyTracker);
@@ -109,9 +105,10 @@ function App() {
             />
           </section>
           <section className="introInfo wrapper">
+          <i className="fa-solid fa-angles-down"></i>
             <div className="howTo wrapper">
               <div>
-                <i class="fa-solid fa-arrow-up-right-dots"></i>
+                <i className="fa-solid fa-arrow-up-right-dots"></i>
                 <h3>Motivation</h3>
                 <p>
                   Our app features a Sober Streak feature where you can track
@@ -120,7 +117,7 @@ function App() {
                 </p>
               </div>
               <div>
-                <i class="fa-solid fa-lightbulb"></i>
+                <i className="fa-solid fa-lightbulb"></i>
                 <h3>Understanding</h3>
                 <p>
                   Use our app to store details of you urge; such as when it
@@ -130,7 +127,7 @@ function App() {
                 </p>
               </div>
               <div>
-              <i class="fa-solid fa-brain"></i>
+              <i className="fa-solid fa-brain"></i>
                 <h3>Functional Analysis</h3>
                 <p>
                   Look back on your urge history to reflect on any patterns in
@@ -164,16 +161,21 @@ function App() {
         </div>
       ) : null}
       <section className="mainContent">
+
       {showForm ? (
-        
-        <Form handleFormSubmit={handleFormSubmit} data={entry} />
+        <div className="formSection">
+            <Form handleFormSubmit={handleFormSubmit} data={entry} />
+            <h2> Urge Log </h2>
+            <p> Use your urge history below to further develop self-awareness of patterns in your use.</p>
+        </div>
+      
       ) : null}
 
-      {displayNewEntry ? <Entries display={handleEntryDisplay} /> : null}
-        <div className="entriesSection">
+        <div className="entriesSection wrapper">
       {showForm && entry && entry.length > 0
         ? entry.map((data) => {
-            return <Entries data={data.data} />;
+            return <Entries data={data.data} key={data.key}/>
+            ;
           })
         : null}
        </div>

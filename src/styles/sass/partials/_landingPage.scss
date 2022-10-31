@@ -5,9 +5,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
- .introInfo {
+     .introInfo {
+    padding-top: 10px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
     flex-direction: column;
     height: 70vh;
 }
-
+}
 
 .headerContent {
     background-color: $lightGrey;

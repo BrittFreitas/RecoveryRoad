@@ -1,40 +1,52 @@
+import { useState } from "react";
+
 const Entries = (props) => {
-
  
-  // triggers: triggers,
-  // quantity: quantity,
-  // reflections: feelsAfter,
-  // strategiesUsed: strategiesUsed,
-  
-  //not working
- // console.log(props.newState)
-  
+  const [showAccordian, setShowAccordian] = useState(false);
+  const [flipIcon, setFlipIcon] = useState(false);
+
+  const handleAccordian = () => {
+    setShowAccordian(!showAccordian);
+    setFlipIcon(!flipIcon);
+  }
+
   return (
-    <div className="entry"> 
-    <h3>{props.data.date}</h3>
-      <ul>
+    <div className="entry wrapper"> 
+    <div className="logTitle" onClick={handleAccordian}>
+       <h3 >{props.data.date}</h3>
+           {
+      flipIcon
+      ? <i className="fa-solid fa-angle-up"></i>
+      : <i className="fa-solid fa-angle-down"></i>
+    }
+    </div>
+
+    {
+      showAccordian
+      ? <ul>
         <li>
-          <p>Urge Intensity: {props.data.urgeIntensity}</p>
+          <p>Urge Intensity:{props.data.urgeIntensity}</p>
         </li>
 
         <li>
-            <p>Triggers: {props.data.triggers}</p> 
+            <p>Triggers:{props.data.triggers}</p> 
         </li>
 
         <li>
-            <p>Use: {props.data.quantity}</p>
+            <p>Use:{props.data.quantity}</p>
         </li>
          
         <li>
             <p>Thoughts and Feelings Post Urge: {props.data.reflections}</p>
-     
         </li>
         
         <li>
             <p>Strategy and it's impact: {props.data.strategiesUsed}</p>
-          
         </li> 
       </ul>
+      : null
+    }
+      
     </div>
   );
 };

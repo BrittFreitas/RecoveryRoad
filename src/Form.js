@@ -22,27 +22,27 @@ const Form = (props) => {
 
 
   return (
-    <section className="wrapper">
+    <section>
       <div className="reflectionForm">
         <form className="formItems wrapper" action="" onSubmit={(e) => props.handleFormSubmit(e, date, urgeIntensity, triggers, quantity, feelsAfter, strategiesUsed )}>
-        <h3>Reflection Form</h3>
+        <h2>Reflection Form</h2>
         <p>Complete the form below to log details of your urge.</p>
           <label htmlFor="">Date:</label>
-          <textarea cols="50" type="text" onChange={(e) => handleDateChange(e)}/>
+          <textarea cols="50" rows="1" type="text" onChange={(e) => handleDateChange(e)}/>
  
           <label htmlFor="">Rate the intensity of your urge from 1-10:</label>
-          <textarea cols="50" rows="2" type="text" onChange={(e) => handleUrgeChange(e)}/>
+          <textarea cols="50" rows="1" type="text" onChange={(e) => handleUrgeChange(e)}/>
 
           <label htmlFor="">
             What internal or external triggers may have prompted the urge?
           </label>
-          <textarea cols="50"
+          <textarea cols="50" rows="4"
           onChange={(e) => handleTriggerChange(e)}
             type="text"
           />
 
           <label htmlFor="">Describe the quantity of your use:</label>
-          <textarea cols="50"
+          <textarea cols="50" rows="3"
           onChange={(e) => handleQuantityChange(e)}
             type="text"
           />
@@ -50,13 +50,13 @@ const Form = (props) => {
           <label htmlFor="">
             What thoughts and feelings did you have after the urge?
           </label>
-          <textarea cols="50" type="text" onChange={(e) => handleFeelsChange(e)} />
+          <textarea cols="50" rows="4" type="text" onChange={(e) => handleFeelsChange(e)} />
 
           <label htmlFor="">
             What, if any strategies did you find helpful in supporting yourself
             through this urge?
           </label>
-          <textarea cols="50" type="text" onChange={(e) => handleCopingChange(e)} />
+          <textarea cols="50"  rows="4" type="text" onChange={(e) => handleCopingChange(e)} />
 
           <button type="submit">Save</button>
 
@@ -69,38 +69,3 @@ const Form = (props) => {
 
 export default Form;
 
-// const [date, setDate] = useState(null);
-//         const [firstName, setFirstName] = useState("");
-//         const [lastName, setlastName] = useState("");
-
-//         const handleDateChange = () => setDate(e.target.value);
-//         const handleFirstNameChange = () => setFirstName(e.target.value);
-//         const handleLastNameChange = () => setLastName(e.target.value);
-
-//         const handleSubmit = () => {
-//           const data = {
-//             date: date,
-//             firstName: firstName,
-//             lastName: lastName,
-//           };
-//           // Push data to Firebase
-//           push(databaseRef, data);
-//         }
-
-//         <form action="">
-//           <input
-//             name="date "
-//             type="date"
-//             onClick={(e) => handleDateChange(e)}
-//           />
-//           <input
-//             name="firstName"
-//             type="text"
-//             onClick={(e) => handleFirstNameChange(e)}
-//           />
-//           <input
-//             name="lastName"
-//             type="text"
-//             onClick={(e) => handleLastNameChange(e)}
-//           />
-//         </form>

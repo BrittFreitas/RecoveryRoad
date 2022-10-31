@@ -1,66 +1,76 @@
 @use "./variables" as *;
 
-
 .sectionTwo {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 30vh;
-    text-align: center;
-    
-    background-color: $backgroundColor;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 18vh;
+  text-align: center;
+  background-color: $backgroundColor;
 
-    button {
-        margin: 5px;
-    }
+  button {
+    margin: 5px;
+    padding: 5px;
+    width: 125px;
+  }
 
-    p {
-        font-size: clamp(0.2rem, 3vw, 0.7rem);
-    }
+  p {
+    font-size: clamp(0.2rem, 3vw, 0.7rem);
+  }
 }
 .sobrietyContent {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-    h2 {
-        font-size: 1rem;
-    }
-    
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 .beginnerSection {
-    height: 77vh;
-    h2 {
-        font-size: 2rem;
-    }
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
   }
-  
-.mainContent {
-    display: flex;
-    justify-content: space-evenly;
-   
 }
 
+.mainContent {
+  width: 100%;
+}
 
 .entriesSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    //height: 80%;
-    .entry {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  
+    
+  .entry {
     background-color: $backgroundColor;
     border-radius: 25px;
-    padding: 20px;
-    width: 100%;
-    align-self: flex-start;
+    padding: 10px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     height: fit-content;
     margin-top: 50px;
-}
-}
 
+    .logTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        i {
+            color: $royalBlue;
+            font-size: small;
+        }
+    }
+  }
+}

@@ -2,18 +2,21 @@
 
 .reflectionForm {
     margin: 50px 0;
+    width: 100%;
+
      form {
         border: 2px solid $babyBlue;
         height: 50vh;
         width: 60%; 
         h3 {
             margin-top: 15px;
-            font-size: 1rem;
         }
         label {
             text-align: left;
             width: 86%;
             margin-top: 10px;
+            font-size: 0.75rem;
+            margin: 2px;
         }
 
         input:focus {
@@ -39,9 +42,23 @@
       justify-content: center;
       align-items: center;
       height: 100%;
-      width: 90%;
+      width: 60%;
      
     }
 
 }
    
+.formSection {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h2, p {
+           display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+ 
+}
