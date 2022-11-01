@@ -28,22 +28,22 @@ const Form = (props) => {
         <h2>Reflection Form</h2>
         <p>Complete the form below to log details of your urge.</p>
           <label htmlFor="date">Date:</label>
-          <input id="date" type="date" required onChange={(e) => handleDateChange(e)}/>
+          <input id="date" type="date" rows="2" required onChange={(e) => handleDateChange(e)}/>
  
-          <label htmlFor="urgeIntensity">Rate the intensity of your urge:</label>
-          <input id="urgeIntensity" min="0" max="100" step="1" type="range" required onChange={(e) => handleUrgeChange(e)}/>
+          <label htmlFor="urgeIntensity">Rate the intensity of your urge (1-10):</label>
+          <input id="urgeIntensity" type="number" required onChange={(e) => handleUrgeChange(e)}/>
 
           <label htmlFor="triggers">
             What internal or external triggers may have prompted the urge?
           </label>
-          <textarea id="triggers" cols="50" rows="4"
+          <textarea id="triggers" cols="50" rows="10"
           onChange={(e) => handleTriggerChange(e)}
             type="text"
             required
           />
 
           <label htmlFor="quantity" >Describe the quantity of your use:</label>
-          <textarea id="quantity" cols="50" rows="3"
+          <textarea id="quantity" cols="50" rows="10"
           onChange={(e) => handleQuantityChange(e)}
             type="text" required
           />
@@ -51,13 +51,13 @@ const Form = (props) => {
           <label htmlFor="reflection">
             What thoughts and feelings did you have after the urge?
           </label>
-          <textarea id="reflection" cols="50" rows="4" type="text"  onChange={(e) => handleFeelsChange(e)} required />
+          <textarea id="reflection" cols="50" rows="10" type="text"  onChange={(e) => handleFeelsChange(e)} required />
 
           <label htmlFor="strats">
             What, if any strategies did you find helpful in supporting yourself
             through this urge?
           </label>
-          <textarea id="strats" cols="50"  rows="4" type="text"  onChange={(e) => handleCopingChange(e)} required/>
+          <textarea id="strats" cols="50"  rows="10" type="text"  onChange={(e) => handleCopingChange(e)} required/>
 
           <button type="submit">Save</button>
 

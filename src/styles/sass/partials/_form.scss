@@ -9,7 +9,11 @@
      form {
         border: 2px solid $babyBlue;
         height: 50vh;
-        width: 60%; 
+        width: 50%; 
+
+        @include tablet {
+            height: 83vh;
+        }
 
         input {
             border: $bloodOrange;
@@ -22,8 +26,9 @@
         } 
 
         input#date {
-            font-size: 15px;
+           
             width: 85%;
+            height: 20%;
         }
         
         }
@@ -89,39 +94,3 @@
  
 }
 
-//styling to handle thumb and track on range slider below
-
-input[type=range]::-webkit-slider-runnable-track {
-    background-color: white;
-       border: 2px solid $bloodOrange;
-        border-radius: 25px;
-        
-      }
-    
-      input[type=range]:focus::-webkit-slider-runnable-track {
-        background: $bloodOrange;
-        border: 1px solid $bloodOrange;
-      }
-    
-    
-      input[type=range]::-webkit-slider-thumb {
-        background-color: $bloodOrange;
-        color: $bloodOrange;
-      }
-      
-    
-      input[type=range]::-moz-range-thumb {
-        background-color: $bloodOrange;
-       color: $bloodOrange;
-      }
-      
-      input[type=range]::-ms-thumb {
-       background-color: $bloodOrange;
-       color: $bloodOrange;
-       
-      } 
-    
-      input[type=range]::-moz-range-track {
-        background-color: $bloodOrange;
-        border-radius: 25px;
-      }
