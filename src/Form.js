@@ -1,5 +1,5 @@
-import { useState, useEffect} from "react"
-import Entries from "./Entries";
+import { useState } from "react"
+
 
 
 const Form = (props) => {

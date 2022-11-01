@@ -3,7 +3,7 @@ import SobrietyTracker from "./SobrietyTracker";
 import Form from "./Form";
 import Entries from "./Entries";
 import { useState, useEffect } from "react";
-import { getDatabase, ref, push, onValue, remove } from "firebase/database";
+import { getDatabase, ref, push, onValue } from "firebase/database";
 import firebaseConfig from "./firebase";
 import headerPhoto from "./assets/headerPhoto.jpg";
 
@@ -101,7 +101,7 @@ function App() {
             <img
               className="headerPhoto"
               src={headerPhoto}
-              alt="vector image of person holding a kit walking off a path in the mountains"
+              alt="person walking into clouds"
             />
           </section>
           <section className="introInfo wrapper">
