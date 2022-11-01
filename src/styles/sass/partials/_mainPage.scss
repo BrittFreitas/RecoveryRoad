@@ -11,6 +11,10 @@
   text-align: center;
   background-color: $backgroundColor;
 
+  @include mobile {
+    height: 22vh;
+  }
+
   button {
     margin: 5px;
     padding: 5px;

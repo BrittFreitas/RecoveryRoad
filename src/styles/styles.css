@@ -200,6 +200,11 @@ footer {
   text-align: center;
   background-color: #e8e2e4;
 }
+@media (max-width: 545px) {
+  .sectionTwo {
+    height: 22vh;
+  }
+}
 .sectionTwo button {
   margin: 5px;
   padding: 5px;
@@ -290,6 +295,11 @@ footer {
 @media (max-width: 800px) {
   .reflectionForm form {
     height: 83vh;
+  }
+}
+@media (max-width: 545px) {
+  .reflectionForm form {
+    width: 85%;
   }
 }
 .reflectionForm form input {
