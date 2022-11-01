@@ -73,6 +73,10 @@
     @include tablet {
         margin-top: 25px;
     }
+
+    @include mobile {
+        width: 70%;
+    }
   
 
     .logTitle {

@@ -58,25 +58,20 @@ function App() {
   };
 
   useEffect(() => {
-    //create a variable that will hold on to our databse values
+    //create a variable that will hold on to our databse values and referencing it.
     const database = getDatabase(firebaseConfig);
-    //create a variable that makes reference to our database
     const databaseRef = ref(database);
     // grabbing the information from our database
     onValue(databaseRef, (response) => {
       const newState = [];
-      //storing the returned data as a variable
+      //storing the returned data as a variable and looping through it.
       const data = response.val();
-      //loop through the returned object
       for (let key in data) {
-        // we're coming back to this in a bit
+       
         newState.push({ key: key, data: data[key] });
       }
-      //updating state with the new array
-      console.log(newState);
       setEntry(newState);
-      // const dataArray = Object.values(newState);
-      // console.log(dataArray);
+     
     });
   }, []);
 
@@ -153,22 +148,21 @@ function App() {
       ) : null}
 
       {newEntryButton ? (
-        <div className="wrapper beginnerSection">
+        <section className="wrapper beginnerSection">
           <h2>Recovery Log</h2>
           <button className="newEntryButton" onClick={handleNewEntryClick}>
             New Entry
           </button>
-        </div>
+        </section>
       ) : null}
-      <section className="mainContent">
 
+      <section className="mainContent">
       {showForm ? (
         <div className="formSection">
             <Form handleFormSubmit={handleFormSubmit} data={entry} />
             <h2> Urge Log </h2>
             <p className="wrapper"> Use your urge history below to further develop self-awareness of patterns in your use.</p>
         </div>
-      
       ) : null}
 
         <div className="entriesSection wrapper">
@@ -189,7 +183,7 @@ function App() {
           with PHIPPA legislation. This web application is not intended for use
           and should not be used as a substitute for treatment. Please consult
           your respective healthcare provider for access to appropriate
-          resrouces.
+          resources.
         </p>
       </footer>
     </div>

@@ -261,6 +261,11 @@ footer {
     margin-top: 25px;
   }
 }
+@media (max-width: 545px) {
+  .entriesSection .entry {
+    width: 70%;
+  }
+}
 .entriesSection .entry .logTitle {
   display: flex;
   justify-content: center;

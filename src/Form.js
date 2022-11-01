@@ -27,36 +27,36 @@ const Form = (props) => {
         <form className="formItems wrapper" action="" onSubmit={(e) => props.handleFormSubmit(e, date, urgeIntensity, triggers, quantity, feelsAfter, strategiesUsed )}>
         <h2>Reflection Form</h2>
         <p>Complete the form below to log details of your urge.</p>
-          <label htmlFor="">Date:</label>
-          <textarea cols="50" rows="1" type="text" onChange={(e) => handleDateChange(e)}/>
+          <label htmlFor="date">Date:</label>
+          <textarea id="date" cols="50" rows="1" type="text" onChange={(e) => handleDateChange(e)}/>
  
-          <label htmlFor="">Rate the intensity of your urge from 1-10:</label>
-          <textarea cols="50" rows="1" type="text" onChange={(e) => handleUrgeChange(e)}/>
+          <label htmlFor="urgeIntensity">Rate the intensity of your urge from 1-10:</label>
+          <textarea id="urgeIntensity" cols="50" rows="1" type="text" onChange={(e) => handleUrgeChange(e)}/>
 
-          <label htmlFor="">
+          <label htmlFor="triggers">
             What internal or external triggers may have prompted the urge?
           </label>
-          <textarea cols="50" rows="4"
+          <textarea id="triggers" cols="50" rows="4"
           onChange={(e) => handleTriggerChange(e)}
             type="text"
           />
 
-          <label htmlFor="">Describe the quantity of your use:</label>
-          <textarea cols="50" rows="3"
+          <label htmlFor="quantity" >Describe the quantity of your use:</label>
+          <textarea id="quantity" cols="50" rows="3"
           onChange={(e) => handleQuantityChange(e)}
             type="text"
           />
 
-          <label htmlFor="">
+          <label htmlFor="reflection">
             What thoughts and feelings did you have after the urge?
           </label>
-          <textarea cols="50" rows="4" type="text" onChange={(e) => handleFeelsChange(e)} />
+          <textarea id="reflection" cols="50" rows="4" type="text" onChange={(e) => handleFeelsChange(e)} />
 
-          <label htmlFor="">
+          <label htmlFor="strats">
             What, if any strategies did you find helpful in supporting yourself
             through this urge?
           </label>
-          <textarea cols="50"  rows="4" type="text" onChange={(e) => handleCopingChange(e)} />
+          <textarea id="strats" cols="50"  rows="4" type="text" onChange={(e) => handleCopingChange(e)} />
 
           <button type="submit">Save</button>
 
