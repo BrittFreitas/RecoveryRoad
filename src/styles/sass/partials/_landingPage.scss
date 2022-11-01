@@ -40,6 +40,8 @@
         font-size: clamp(1.5rem, 3vw, 3rem);
         max-width: 400px;
         padding-left: 60px;
+        display: flex;
+        align-items: center;
     }
     
     @include tablet {
