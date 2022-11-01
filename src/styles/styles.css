@@ -176,6 +176,7 @@ footer {
   background-color: #e8e2e4;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 @media (max-width: 800px) {
   footer {

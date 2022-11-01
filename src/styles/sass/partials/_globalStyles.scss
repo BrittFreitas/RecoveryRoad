@@ -41,6 +41,7 @@ footer {
     background-color: $backgroundColor;
     display: flex;
     align-items: center;
+    width: 100%;
 
     @include tablet {
         height: 20vh;
