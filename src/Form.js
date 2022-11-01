@@ -28,10 +28,10 @@ const Form = (props) => {
         <h2>Reflection Form</h2>
         <p>Complete the form below to log details of your urge.</p>
           <label htmlFor="date">Date:</label>
-          <textarea id="date" cols="50" rows="1" type="text" onChange={(e) => handleDateChange(e)}/>
+          <input id="date" cols="50" rows="1" type="date" onChange={(e) => handleDateChange(e)}/>
  
           <label htmlFor="urgeIntensity">Rate the intensity of your urge from 1-10:</label>
-          <textarea id="urgeIntensity" cols="50" rows="1" type="text" onChange={(e) => handleUrgeChange(e)}/>
+          <input id="urgeIntensity" cols="50" rows="1" type="range" onChange={(e) => handleUrgeChange(e)}/>
 
           <label htmlFor="triggers">
             What internal or external triggers may have prompted the urge?
@@ -44,7 +44,7 @@ const Form = (props) => {
           <label htmlFor="quantity" >Describe the quantity of your use:</label>
           <textarea id="quantity" cols="50" rows="3"
           onChange={(e) => handleQuantityChange(e)}
-            type="text"
+            type="text" required
           />
 
           <label htmlFor="reflection">
