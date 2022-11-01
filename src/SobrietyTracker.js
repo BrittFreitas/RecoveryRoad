@@ -18,7 +18,7 @@ const SobrietyTracker = () => {
         <section className="wrapper">
             <div className="sobrietyContent">
                 <div>
-                <h2>You've been sober for {daysSober} days!</h2>
+                <h2>You've been on the path to sobriety for {daysSober} days!</h2>
                 <button onClick={handleStreak}>Add Day</button>
                 <button onClick={resetStreak}>Reset Streak</button>
             </div>

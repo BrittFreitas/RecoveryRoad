@@ -115,7 +115,7 @@ function App() {
                 <i className="fa-solid fa-lightbulb"></i>
                 <h3>Understanding</h3>
                 <p>
-                  Use our app to store details of you urge; such as when it
+                  Use our app to store details of your urge; such as when it
                   happened and how you got through it. You can use this info to
                   gain a better understanding of your triggers and build out
                   your support systems accordingly.{" "}
