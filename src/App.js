@@ -97,7 +97,7 @@ function App() {
       {showIntro ? (
         <>
           <section className="headerContent">
-            <h1>Recovery Road: A substance use recovery tool to track your unique journey.</h1>
+            <h1 className="wrapper">Recovery Road: A substance use recovery tool to track your unique journey.</h1>
             <img
               className="headerPhoto"
               src={headerPhoto}
@@ -140,11 +140,11 @@ function App() {
             <div className="enterApp">
               <p>Are you interested in either reducing or stopping your use?</p>
               <div className="options">
-                <button onClick={handleGettingStarted}>
+                <button className="getStarted" onClick={handleGettingStarted}>
                   Yes, Let's Get Started
                 </button>
                 <a href="https://harmreduction.org/all-resources/">
-                  <button>No, but show me harm reduction resources</button>
+                  <button>No, show me harm reduction resources</button>
                 </a>
               </div>
             </div>
@@ -166,7 +166,7 @@ function App() {
         <div className="formSection">
             <Form handleFormSubmit={handleFormSubmit} data={entry} />
             <h2> Urge Log </h2>
-            <p> Use your urge history below to further develop self-awareness of patterns in your use.</p>
+            <p className="wrapper"> Use your urge history below to further develop self-awareness of patterns in your use.</p>
         </div>
       
       ) : null}

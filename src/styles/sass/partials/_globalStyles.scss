@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+
 body {
     font-size: 62.5%;
     color: $royalBlue;
@@ -12,12 +14,12 @@ button {
     border-radius: 25px;
     width: 150px;
     min-width: 100px;
-    font-size: clamp( 0.5rem, 3vw, 0.75rem);
+    font-size: clamp( 0.5rem, 5vw, 0.75rem);
 }
 
 i {
     color: $orange;
-    font-size: 2.5rem;;
+    font-size: clamp(1rem, 5vw, 2.5rem);
 }
 
 h3 {
@@ -27,11 +29,11 @@ h3 {
 }
 
 h2 {
-     font-size: 1.5rem;
+     font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
 p {
-    font-size: 0.75rem;
+    font-size: clamp(0.5rem, 3vw, 0.75rem);
 }
 
 footer {
@@ -39,6 +41,10 @@ footer {
     background-color: $backgroundColor;
     display: flex;
     align-items: center;
+
+    @include tablet {
+        height: 20vh;
+    }
 }
 
 .wrapper {
