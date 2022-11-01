@@ -28,10 +28,10 @@ const Form = (props) => {
         <h2>Reflection Form</h2>
         <p>Complete the form below to log details of your urge.</p>
           <label htmlFor="date">Date:</label>
-          <input id="date" cols="50" rows="1" type="date" onChange={(e) => handleDateChange(e)}/>
+          <input id="date" type="date" required onChange={(e) => handleDateChange(e)}/>
  
-          <label htmlFor="urgeIntensity">Rate the intensity of your urge from 1-10:</label>
-          <input id="urgeIntensity" cols="50" rows="1" type="range" onChange={(e) => handleUrgeChange(e)}/>
+          <label htmlFor="urgeIntensity">Rate the intensity of your urge:</label>
+          <input id="urgeIntensity" min="0" max="100" step="1" type="range" required onChange={(e) => handleUrgeChange(e)}/>
 
           <label htmlFor="triggers">
             What internal or external triggers may have prompted the urge?
@@ -39,6 +39,7 @@ const Form = (props) => {
           <textarea id="triggers" cols="50" rows="4"
           onChange={(e) => handleTriggerChange(e)}
             type="text"
+            required
           />
 
           <label htmlFor="quantity" >Describe the quantity of your use:</label>
@@ -50,13 +51,13 @@ const Form = (props) => {
           <label htmlFor="reflection">
             What thoughts and feelings did you have after the urge?
           </label>
-          <textarea id="reflection" cols="50" rows="4" type="text" onChange={(e) => handleFeelsChange(e)} />
+          <textarea id="reflection" cols="50" rows="4" type="text"  onChange={(e) => handleFeelsChange(e)} required />
 
           <label htmlFor="strats">
             What, if any strategies did you find helpful in supporting yourself
             through this urge?
           </label>
-          <textarea id="strats" cols="50"  rows="4" type="text" onChange={(e) => handleCopingChange(e)} />
+          <textarea id="strats" cols="50"  rows="4" type="text"  onChange={(e) => handleCopingChange(e)} required/>
 
           <button type="submit">Save</button>
 

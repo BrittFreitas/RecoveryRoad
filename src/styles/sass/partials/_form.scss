@@ -1,6 +1,7 @@
 @use './variables' as *;
 @use "./mixins" as *;
 
+
 .reflectionForm {
     margin: 50px 0;
     width: 100%;
@@ -9,6 +10,25 @@
         border: 2px solid $babyBlue;
         height: 50vh;
         width: 60%; 
+
+        input {
+            border: $bloodOrange;
+            color: $royalBlue;
+        }
+
+        input#urgeIntensity {
+            width: 85%;
+            border: 1px solid $bloodOrange;
+        } 
+
+        input#date {
+            font-size: 15px;
+            width: 85%;
+        }
+        
+        }
+
+    
         h3 {
             margin-top: 15px;
         }
@@ -51,7 +71,7 @@
      
     }
 
-}
+
    
 .formSection {
 
@@ -68,3 +88,40 @@
     }
  
 }
+
+//styling to handle thumb and track on range slider below
+
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: white;
+       border: 2px solid $bloodOrange;
+        border-radius: 25px;
+        
+      }
+    
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $bloodOrange;
+        border: 1px solid $bloodOrange;
+      }
+    
+    
+      input[type=range]::-webkit-slider-thumb {
+        background-color: $bloodOrange;
+        color: $bloodOrange;
+      }
+      
+    
+      input[type=range]::-moz-range-thumb {
+        background-color: $bloodOrange;
+       color: $bloodOrange;
+      }
+      
+      input[type=range]::-ms-thumb {
+       background-color: $bloodOrange;
+       color: $bloodOrange;
+       
+      } 
+    
+      input[type=range]::-moz-range-track {
+        background-color: $bloodOrange;
+        border-radius: 25px;
+      }

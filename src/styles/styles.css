@@ -287,28 +287,41 @@ footer {
   height: 50vh;
   width: 60%;
 }
-.reflectionForm form h3 {
+.reflectionForm form input {
+  border: #ef705d;
+  color: #01163a;
+}
+.reflectionForm form input#urgeIntensity {
+  width: 85%;
+  border: 1px solid #ef705d;
+}
+.reflectionForm form input#date {
+  font-size: 15px;
+  width: 85%;
+}
+.reflectionForm h3 {
   margin-top: 15px;
 }
-.reflectionForm form label {
+.reflectionForm label {
   text-align: left;
   width: 86%;
   margin-top: 10px;
   font-size: 0.75rem;
   margin: 2px;
 }
-.reflectionForm form input:focus {
+.reflectionForm input:focus {
   border: none;
   outline: none;
 }
-.reflectionForm form textarea {
+.reflectionForm textarea {
   border: 1px solid #ef705d;
   width: 85%;
 }
-.reflectionForm form button {
+.reflectionForm button {
   margin: 20px;
 }
-.reflectionForm .formItems {
+
+.formItems {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -317,7 +330,7 @@ footer {
   width: 60%;
 }
 @media (max-width: 545px) {
-  .reflectionForm .formItems {
+  .formItems {
     width: 85%;
   }
 }
@@ -331,4 +344,35 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: white;
+  border: 2px solid #ef705d;
+  border-radius: 25px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ef705d;
+  border: 1px solid #ef705d;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #ef705d;
+  color: #ef705d;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: #ef705d;
+  color: #ef705d;
+}
+
+input[type=range]::-ms-thumb {
+  background-color: #ef705d;
+  color: #ef705d;
+}
+
+input[type=range]::-moz-range-track {
+  background-color: #ef705d;
+  border-radius: 25px;
 }/*# sourceMappingURL=styles.css.map */

@@ -25,23 +25,23 @@ const Entries = (props) => {
       showAccordian
       ? <ul>
         <li>
-          <p>Urge Intensity:{props.data.urgeIntensity}</p>
+          <p>Urge Intensity:  {props.data.urgeIntensity}</p>
         </li>
 
         <li>
-            <p>Triggers:{props.data.triggers}</p> 
+            <p>Triggers:  {props.data.triggers}</p> 
         </li>
 
         <li>
-            <p>Use:{props.data.quantity}</p>
+            <p>Use:  {props.data.quantity}</p>
         </li>
          
         <li>
-            <p>Thoughts and Feelings Post Urge: {props.data.reflections}</p>
+            <p>Thoughts and Feelings Post Urge:  {props.data.reflections}</p>
         </li>
         
         <li>
-            <p>Strategy and it's impact: {props.data.strategiesUsed}</p>
+            <p>Strategy and it's impact:  {props.data.strategiesUsed}</p>
         </li> 
       </ul>
       : null
