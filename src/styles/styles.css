@@ -15,11 +15,11 @@
 }
 @media (max-width: 800px) {
   .App .introInfo {
-    height: 100vh;
+    height: 140vh;
     justify-content: space-evenly;
   }
   .App .introInfo .fa-angles-down {
-    display: none;
+    padding-bottom: 50px;
   }
 }
 
