@@ -58,8 +58,9 @@ function App() {
   };
 
   useEffect(() => {
-    //create a variable that will hold on to our databse values and referencing it.
+    //create a variable that will hold on to our databse values.
     const database = getDatabase(firebaseConfig);
+    //referencing my database
     const databaseRef = ref(database);
     // grabbing the information from our database
     onValue(databaseRef, (response) => {
