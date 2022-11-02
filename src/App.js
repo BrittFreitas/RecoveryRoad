@@ -8,16 +8,17 @@ import firebaseConfig from "./firebase";
 import headerPhoto from "./assets/headerPhoto.jpg";
 
 function App() {
+  //setting states to display items on page and store my data
   const [showForm, setShowForm] = useState(false);
   const [newEntryButton, setNewEntryButton] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const [showSobrietyTracker, setShowSobrietyTracker] = useState(false);
   const [entry, setEntry] = useState([]);
- 
 
+  //creating funtions below that handle changes in state, these will be passed in to onCLick event handlers.
   const handleSobrietyTracker = () => {
     setShowSobrietyTracker(!showSobrietyTracker);
-  }
+  };
 
   const handleGettingStarted = () => {
     setShowIntro(!showIntro);
@@ -68,11 +69,9 @@ function App() {
       //storing the returned data as a variable and looping through it.
       const data = response.val();
       for (let key in data) {
-       
         newState.push({ key: key, data: data[key] });
       }
       setEntry(newState);
-     
     });
   }, []);
 
@@ -83,17 +82,20 @@ function App() {
         <h2 className="wrapper">RecoveryRoad</h2>
       </header>
 
-      {showSobrietyTracker
-       ?<section className="sectionTwo">
-        <SobrietyTracker /> 
-        <button onClick={handleSobrietyTracker}>Disable Feature</button>
+      {showSobrietyTracker ? (
+        <section className="sectionTwo">
+          <SobrietyTracker />
+          <button onClick={handleSobrietyTracker}>Disable Feature</button>
         </section>
-       : null}
+      ) : null}
 
       {showIntro ? (
         <>
           <section className="headerContent">
-            <h1 className="wrapper">Recovery Road: A substance use recovery tool to track your unique journey.</h1>
+            <h1 className="wrapper">
+              Recovery Road: A substance use recovery tool to track your unique
+              journey.
+            </h1>
             <img
               className="headerPhoto"
               src={headerPhoto}
@@ -101,7 +103,7 @@ function App() {
             />
           </section>
           <section className="introInfo wrapper">
-          <i className="fa-solid fa-angles-down"></i>
+            <i className="fa-solid fa-angles-down"></i>
             <div className="howTo wrapper">
               <div>
                 <i className="fa-solid fa-arrow-up-right-dots"></i>
@@ -123,7 +125,7 @@ function App() {
                 </p>
               </div>
               <div>
-              <i className="fa-solid fa-brain"></i>
+                <i className="fa-solid fa-brain"></i>
                 <h3>Functional Analysis</h3>
                 <p>
                   Look back on your urge history to reflect on any patterns in
@@ -148,6 +150,8 @@ function App() {
         </>
       ) : null}
 
+
+      {/* Here I am renering the new entery button which features an event handler that will show user the form */}
       {newEntryButton ? (
         <section className="wrapper beginnerSection">
           <h2>Recovery Log</h2>
@@ -157,23 +161,29 @@ function App() {
         </section>
       ) : null}
 
+    {/* here I am displayingthe form component when state of show form is set to true and attaching the handle form submit function to push my data into firebase */}
       <section className="mainContent">
-      {showForm ? (
-        <div className="formSection">
+        {showForm ? (
+          <div className="formSection">
             <Form handleFormSubmit={handleFormSubmit} data={entry} />
             <h2> Urge Log </h2>
-            <p className="wrapper"> Use your urge history below to further develop self-awareness of patterns in your use.</p>
-        </div>
-      ) : null}
+            <p className="wrapper">
+              {" "}
+              Use your urge history below to further develop self-awareness of
+              patterns in your use.
+            </p>
+          </div>
+        ) : null}
 
+
+        {/* below code handles: if the form is showing and data has been pushed into the array, map through it and give me the Entries component. Passing data and key props into this */}
         <div className="entriesSection wrapper">
-      {showForm && entry && entry.length > 0
-        ? entry.map((data) => {
-            return <Entries data={data.data} key={data.key}/>
-            ;
-          })
-        : null}
-       </div>
+          {showForm && entry && entry.length > 0
+            ? entry.map((data) => {
+                return <Entries data={data.data} key={data.key} />;
+              })
+            : null}
+        </div>
       </section>
 
       <footer>
