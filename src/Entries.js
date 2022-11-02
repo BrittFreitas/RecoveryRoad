@@ -2,13 +2,7 @@ import { useState } from "react";
 
 const Entries = (props) => {
  
-  const [showAccordian, setShowAccordian] = useState(false);
-  const [flipIcon, setFlipIcon] = useState(false);
-
-  const handleAccordian = () => {
-    setShowAccordian(!showAccordian);
-    setFlipIcon(!flipIcon);
-  }
+  
 
   return (
     <div className="entry wrapper"> 
