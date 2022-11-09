@@ -3,6 +3,8 @@ import { useState } from "react"
 
 
 const Form = (props) => {
+
+  //setting a state for each input
   const [date, setDate] = useState("");
   const [urgeIntensity, setUrgeIntensity] = useState(0);
   const [triggers, setTriggers] = useState("");
@@ -11,8 +13,7 @@ const Form = (props) => {
   const [strategiesUsed, setStrategiesUsed] = useState("");
   
  
-
-  //creating functions for each state that set the state to the users input, each of these functions will be called on
+  //creating functions for each state that set the state to the users input, each of these functions will be called in the form, they will target the value of the users input
   const handleDateChange = (e) => setDate(e.target.value);
   const handleUrgeChange = (e) => setUrgeIntensity(e.target.value);
   const handleTriggerChange = (e) => setTriggers(e.target.value);
