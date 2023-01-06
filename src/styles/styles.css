@@ -59,9 +59,15 @@ header {
   width: 100%;
   background-color: #F1F1F1;
 }
+header a {
+  text-decoration: none;
+}
 header h2 {
   padding: 20px;
   font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  color: #01163a;
 }
 
 .howTo {
@@ -177,6 +183,7 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
+  margin-top: 75px;
 }
 @media (max-width: 800px) {
   footer {

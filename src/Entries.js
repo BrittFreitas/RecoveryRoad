@@ -1,9 +1,10 @@
 import { useState } from "react";
-
+//setting states to track showing entry description.
 const Entries = (props) => {
   const [showAccordian, setShowAccordian] = useState(false);
   const [flipIcon, setFlipIcon] = useState(false);
 
+  //creating a function that wil handle state changes, passing these on click of the date div
   const handleAccordian = () => {
     setShowAccordian(!showAccordian);
     setFlipIcon(!flipIcon);
